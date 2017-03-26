@@ -1,2 +1,13 @@
 #!/bin/bash
-cp $HOME/.dotfiles/.zshrc $HOME/.zshrc
+
+# ZSH
+rm -rf $HOME/.oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Symlink ZSH prefs
+rm $HOME/.zshrc
+ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
+
+# GIT prefs
+git config --global user.name "nickurt"
+git config --global user.email nickurt@users.noreply.github.com
