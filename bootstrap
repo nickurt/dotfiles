@@ -33,3 +33,6 @@ sudo sed -i 's/\(listen = \/home\/\([^<>]*\)\/.valet\/valet.sock\)/listen = 127.
 
 # Laravel Installer
 composer global require "laravel/installer"
+
+# MariaDB
+sudo apt-get install mariadb-server
