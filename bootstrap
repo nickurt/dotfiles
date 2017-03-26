@@ -11,3 +11,25 @@ ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 # GIT prefs
 git config --global user.name "nickurt"
 git config --global user.email nickurt@users.noreply.github.com
+
+# PHP 7.1
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+sudo apt-get install php7.1-fpm php7.1-mysql php7.1-cli php7.1-curl php7.1-mbstring php7.1-mcrypt php7.1-xml php7.1-zip php7.1-intl
+
+# Composer
+curl -sS https://getcomposer.org/installer | php
+sudo mv -f composer.phar /usr/local/bin/composer
+
+# Laravel Valet on Windows Subsystem for Linux
+# https://hackernoon.com/experimenting-with-windows-subsystem-for-linux-and-web-development-85180b90382f#.92zw3kfn8
+sudo apt-get install dnsmasq libnss3-tools jq xsel
+composer global require cpriego/valet-linux
+sudo mkdir /etc/NetworkManager/dnsmasq.d/
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+valet install
+sudo sed -i 's/\(fastcgi_pass unix:\/home\/\([^<>]*\)\/.valet\/valet.sock;\)/fastcgi_pass 127.0.0.1:9000;/g' /etc/nginx/sites-available/valet.conf
+sudo sed -i 's/\(listen = \/home\/\([^<>]*\)\/.valet\/valet.sock\)/listen = 127.0.0.1:9000/g' /etc/php/7.1/fpm/pool.d/valet.conf
+
+# Laravel Installer
+composer global require "laravel/installer"

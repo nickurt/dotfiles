@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Shortcuts
+alias e="exit"
+alias h="cd ~"
+
+# Update / Upgrade
+alias update="sudo apt-get update"
+alias upgrade="sudo apt-get upgrade"
