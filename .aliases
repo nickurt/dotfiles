@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
 # Shortcuts
+alias a="php artisan"
+alias c="composer"
 alias e="exit"
 alias h="cd ~"
+alias l="ls -laF"
 
 # Update / Upgrade
 alias update="sudo apt-get update"
