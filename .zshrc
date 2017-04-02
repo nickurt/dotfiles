@@ -87,4 +87,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source ~/.dotfiles/.aliases
+for file in ~/.dotfiles/.{exports,aliases,functions}; do
+	if [[ -r $file && -w $file ]]
+	then
+		source "$file"
+	fi
+done
+
+for file in ~/.dotfiles-custom/.{exports,aliases,functions}; do
+	if [[ -r $file && -w $file ]]
+	then
+		source "$file"
+	fi
+done
