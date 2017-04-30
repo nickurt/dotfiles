@@ -1,0 +1,10 @@
+function afk() {
+	if cat /proc/version | grep -q 'Microsoft@Microsoft.com'
+	then
+		rundll32.exe user32.dll,LockWorkStation
+	fi
+}
+
+function digga() {
+	dig +nocmd "$1" any +multiline +noall +answer;
+}
