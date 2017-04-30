@@ -9,11 +9,10 @@ rm $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
 # Symlink GIT prefs
-rm $HOME/.gitconfig
-ln -s $HOME/.dotfiles/.gitconfig $HOME/.gitconfig
-
 rm $HOME/.global-gitignore
 ln -s $HOME/.dotfiles/.global-gitignore $HOME/.global-gitignore
+git config --global user.name "nickurt"
+git config --global user.email nickurt@users.noreply.github.com
 git config --global core.excludesfile $HOME/.global-gitignore
 
 # PHP 7.1
