@@ -101,4 +101,7 @@ for file in ~/.dotfiles-custom/.{exports,aliases,functions}; do
 	fi
 done
 
+# https://github.com/Microsoft/BashOnWindows/issues/1887#issuecomment-294297758
+unsetopt BG_NICE
+
 . $HOME/.dotfiles/z.sh
