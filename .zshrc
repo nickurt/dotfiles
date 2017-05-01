@@ -100,3 +100,5 @@ for file in ~/.dotfiles-custom/.{exports,aliases,functions}; do
 		source "$file"
 	fi
 done
+
+. $HOME/.dotfiles/z.sh

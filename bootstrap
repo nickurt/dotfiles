@@ -4,21 +4,24 @@
 rm -rf $HOME/.oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+wget https://raw.githubusercontent.com/rupa/z/master/z.sh -O ~/.dotfiles/z.sh
+chmod +x ~/.dotfiles/z.sh
+
 # Symlink ZSH prefs
 rm $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
 # Symlink GIT prefs
+rm $HOME/.gitconfig
+ln -s $HOME/.dotfiles/.gitconfig $HOME/.gitconfig
+
 rm $HOME/.global-gitignore
 ln -s $HOME/.dotfiles/.global-gitignore $HOME/.global-gitignore
-git config --global user.name "nickurt"
-git config --global user.email nickurt@users.noreply.github.com
-git config --global core.excludesfile $HOME/.global-gitignore
 
 # PHP 7.1
 sudo add-apt-repository -y ppa:ondrej/php
 sudo apt-get update
-sudo apt-get install -y php7.1-fpm php7.1-mysql php7.1-cli php7.1-curl php7.1-mbstring php7.1-mcrypt php7.1-xml php7.1-zip php7.1-intl
+sudo apt-get install -y php7.1-cli php7.1-curl php7.1-fpm php7.1-intl php7.1-mbstring php7.1-mcrypt php7.1-mysql php7.1-xml php7.1-zip
 
 # Composer
 curl -sS https://getcomposer.org/installer | php
