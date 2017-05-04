@@ -54,7 +54,7 @@ DEFAULT_USER=`whoami`
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git git-flow composer)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,6 +102,9 @@ for file in ~/.dotfiles-custom/.{exports,aliases,functions}; do
 done
 
 # https://github.com/Microsoft/BashOnWindows/issues/1887#issuecomment-294297758
-unsetopt BG_NICE
+if cat /proc/version | grep -q 'Microsoft@Microsoft.com'
+then
+	unsetopt BG_NICE
+fi
 
 . $HOME/.dotfiles/z.sh

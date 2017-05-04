@@ -1,18 +1,12 @@
 #!/usr/bin/env bash
 
-# Zsh
-alias reload=". ~/.zshrc"
+# Laravel
+alias a='php artisan'
 
 # Shortcuts
-alias a="php artisan"
-alias c="composer"
 alias e="exit"
 alias h="cd ~"
 alias l="ls -laF"
-
-# Update / Upgrade
-alias update="sudo apt-get update"
-alias upgrade="sudo apt-get upgrade"
 
 # WeekNumber
 alias week='date +%V'
