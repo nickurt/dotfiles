@@ -44,8 +44,8 @@ composer global require "laravel/installer"
 sudo apt-get install -y mariadb-server
 
 # Sublime Text 3
-# wget https://download.sublimetext.com/sublime_text_3_build_3126_x64.tar.bz2
-# tar vxjf sublime_text_3_build_3126_x64.tar.bz2
-# sudo mv sublime_text_3 /opt/sublime_text_3
+# wget https://download.sublimetext.com/sublime_text_3_build_3126_x64.tar.bz2 -O ~/sublime_text_3.tar.bz2
+# tar vxjf ~/sublime_text_3.tar.bz2 -C ~/
+# sudo mv ~/sublime_text_3 /opt/sublime_text_3
 # sudo ln -s /opt/sublime_text_3/sublime_text /usr/local/bin/subl
-# rm -f ~/sublime_text_3_build_3126_x64.tar.bz2
+# rm -f ~/sublime_text_3.tar.bz2
