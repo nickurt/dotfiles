@@ -30,7 +30,7 @@ function weather() {
 		city="Amsterdam"
 	fi
 
-	eval "curl http://wttr.in/${city}"
+	eval "curl -H 'Accept-Language: nl' http://wttr.in/${city}"
 }
 
 
