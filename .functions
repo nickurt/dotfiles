@@ -23,6 +23,17 @@ function fs() {
 	fi
 }
 
+function weather() {
+	city="$1"
+
+	if [ -z "$city" ]; then
+		city="Amsterdam"
+	fi
+
+	eval "curl http://wttr.in/${city}"
+}
+
+
 function digga() {
 	dig +nocmd "$1" any +multiline +noall +answer;
 }
