@@ -33,6 +33,9 @@ function weather() {
 	eval "curl -s -H 'Accept-Language: nl' http://wttr.in/${city} | head -n -3"
 }
 
+function head() {
+	eval "http head $1"
+}
 
 function digga() {
 	dig +nocmd "$1" any +multiline +noall +answer;
