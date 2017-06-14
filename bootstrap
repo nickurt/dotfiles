@@ -49,3 +49,7 @@ sudo apt-get install -y mariadb-server
 # sudo mv ~/sublime_text_3 /opt/sublime_text_3
 # sudo ln -s /opt/sublime_text_3/sublime_text /usr/local/bin/subl
 # rm -f ~/sublime_text_3.tar.bz2
+
+# HTTPie
+# https://miteshshah.github.io/sysadmin/httpie-http-for-humans/#install-on-debian-based-linux-distribution-such-as-debianubuntu
+sudo apt-get install -y httpie
