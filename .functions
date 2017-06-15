@@ -33,7 +33,7 @@ function weather() {
 	eval "curl -s -H 'Accept-Language: nl' http://wttr.in/${city} | head -n -3"
 }
 
-function head() {
+function url() {
 	eval "http head $1"
 }
 
