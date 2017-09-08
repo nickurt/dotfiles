@@ -41,6 +41,17 @@ function digga() {
 	dig +nocmd "$1" any +multiline +noall +answer;
 }
 
+# https://github.com/paulirish/dotfiles/blob/6fbe3da9b16cc48511eceab38be407daca0f499b/.functions#L71-L83
+function whois() {
+	local domain=$(echo "$1" | awk -F/ '{print $3}') # get domain from URL
+	if [ -z $domain ] ; then
+		domain=$1
+	fi
+	echo "Getting whois record for: $domain …"
+
+	/usr/bin/whois -h whois.internic.net $domain | sed '/NOTICE:/q'
+}
+
 # https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/zsh_reload/zsh_reload.plugin.zsh
 function reload() {
 	local cache=$ZSH_CACHE_DIR
