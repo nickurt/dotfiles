@@ -1,0 +1,42 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.fontFamily": "'Droid Sans Mono for powerline', 'Courier New', monospace, 'Droid Sans Fallback'",
+    "editor.minimap.enabled": false,
+    "extensions.ignoreRecommendations": true,
+    "git.countBadge": "off",
+    "git.ignoreLegacyWarning": true,
+    "material-icon-theme.folders.icons": "classic",
+    "material-icon-theme.showUpdateMessage": false,
+    "search.exclude": {
+        "**/.git": true,
+        "**/vendor": true
+    },
+    "window.menuBarVisibility": "toggle",
+    "window.zoomLevel": 0,
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#3C3F41",
+        "editor.background": "#232525",
+        "editor.lineHighlightBackground" : "#323232",
+        "editor.lineHighlightBorder": "#323232",
+        "editor.selectionBackground": "#214283",
+        "editorGroupHeader.tabsBackground" : "#3C3F41",
+        "list.activeSelectionBackground": "#0D293E",
+        "list.activeSelectionForeground": "#BBBBBB",
+        "list.hoverBackground" : "#0D293E",
+        "list.inactiveSelectionForeground": "#BBBBBB",
+        "scrollbarSlider.activeBackground": "#4E5050",
+        "scrollbarSlider.background": "#4E5050",
+        "scrollbarSlider.hoverBackground": "#4E5050",
+        "sideBar.background": "#3C3F41",
+        "sideBarSectionHeader.background": "#393C3E",
+        "sideBarSectionHeader.foreground": "#BBBBBB",
+        "statusBar.background": "#3C3F41",
+        "tab.activeBackground": "#515658",
+        "tab.activeBorder": "#439EB8",
+        "tab.activeForeground": "#FFFF",
+        "tab.inactiveBackground": "#3C3E3F"
+    },
+    "workbench.colorTheme": "F5 - Darcula",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "none"
+}
