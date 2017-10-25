@@ -37,6 +37,8 @@
         "tab.inactiveBackground": "#3C3E3F"
     },
     "workbench.colorTheme": "F5 - Darcula",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "none"
 }
